@@ -1,9 +1,9 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="dBounty Banner" width="100%" />
+  <img src="assets/banner.svg?v=2" alt="dBounty Banner" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://github.com" target="_blank">
+  <a href="https://github.com/diogocorreadcs/dBounty" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge"/>
   </a>
   <a href="https://getbukkit.org/download/spigot" target="_blank">
