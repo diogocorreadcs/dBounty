@@ -92,8 +92,6 @@ O **dBounty** é um sistema de recompensas por cabeça modular, assíncrono e de
   </tr>
 </table>
 
----
-
 ### Placeholders (PlaceholderAPI)
 
 <table align="center" width="100%">
