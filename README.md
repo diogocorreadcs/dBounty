@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="dBounty Banner" width="100%" />
+  <img src="assets/banner.svg?v=25" alt="dBounty Banner" width="100%" />
 </p>
 
 <p align="center">
