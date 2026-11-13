@@ -1,0 +1,80 @@
+prefix: "&6&ldBOUNTY &8» &r"
+
+general:
+  no-permission: "{prefix}&cVocê não tem permissão para executar este comando."
+  only-players: "{prefix}&cEste comando só pode ser executado por jogadores."
+  player-not-found: "{prefix}&cJogador &f{target} &cnão encontrado ou nunca entrou no servidor."
+  invalid-amount: "{prefix}&cPor favor, digite um valor numérico válido."
+  reloaded: "{prefix}&aConfigurações e mensagens recarregadas com sucesso!"
+
+help:
+  lines:
+    - ""
+    - "&6&lSISTEMA DE RECOMPENSAS - AJUDA"
+    - "&e/bounty &8- &7Abre o menu de jogadores procurados."
+    - "&e/bounty colocar <jogador> <valor> &8- &7Coloca uma recompensa."
+    - "&e/bounty ver <jogador> &8- &7Consulta o valor de um jogador."
+    - "&e/bounty top &8- &7Abre o ranking dos maiores caçadores."
+    - ""
+  admin-lines:
+    - "&c/bounty remover <jogador> &8- &7Remove a recompensa de um jogador."
+    - "&c/bounty reload &8- &7Recarrega os arquivos de configuração."
+    - ""
+
+bounty:
+  below-minimum: "{prefix}&cO valor mínimo para colocar uma recompensa é &f{min}&c."
+  above-maximum: "{prefix}&cO valor máximo permitido para uma recompensa é &f{max}&c."
+  not-enough-money: "{prefix}&cVocê precisa de &f{total_cost} &c(incluindo {tax}% de taxa) para fazer isso."
+  already-has-bounty: "{prefix}&cO jogador &f{target} &cjá possui uma recompensa ativa."
+  self-bounty: "{prefix}&cVocê não pode colocar uma recompensa em si mesmo."
+  same-clan-bounty: "{prefix}&cVocê não pode colocar uma recompensa em um membro do seu próprio clã."
+  blocked-region: "{prefix}&cVocê não pode colocar recompensas estando nesta região protegida."
+  placed-success: "{prefix}&aVocê colocou uma recompensa de &f{amount} &ana cabeça de &f{target} &7(Taxa: {tax_amount})&a."
+  stacked-success: "{prefix}&aVocê adicionou &f{amount} &aà recompensa de &f{target}&a! Novo total: &f{total}&a."
+  placed-broadcast:
+    - ""
+    - "{prefix}&eO jogador &f{sender} &ecolocou uma recompensa de &a{amount} &epela cabeça de &c{target}&e!"
+    - "&7Total acumulado: &a{total} &8| &7Use &f/bounty &7para caçá-lo!"
+    - ""
+  check-has: "{prefix}&eA cabeça de &f{target} &evale atualmente &a{amount}&e!"
+  check-none: "{prefix}&7O jogador &f{target} &7não possui nenhuma recompensa ativa."
+  removed-admin: "{prefix}&aVocê removeu a recompensa ativa de &f{target}&a."
+  none-to-remove: "{prefix}&cO jogador &f{target} &cnão possui nenhuma recompensa para ser removida."
+
+claim:
+  success: "{prefix}&aVocê abateu &f{target} &ae resgatou a recompensa de &f{amount}&a!"
+  broadcast:
+    - ""
+    - "{prefix}&c{killer} &eexecutou &c{target} &ee resgatou a recompensa de &a{amount}&e!"
+    - ""
+  blocked-contributor: "{prefix}&cVocê contribuiu com essa recompensa, portanto não pode resgatá-la."
+  blocked-same-ip: "{prefix}&cResgate bloqueado: ambos os jogadores possuem o mesmo endereço IP."
+  blocked-same-clan: "{prefix}&cResgate bloqueado: você não pode resgatar recompensas de membros do seu clã."
+  blocked-region: "{prefix}&cResgate bloqueado: não é permitido resgatar recompensas nesta região."
+  blocked-cooldown: "{prefix}&cVocê precisa aguardar &f{time}s &cpara resgatar esta recompensa."
+
+items:
+  wanted-head:
+    name: "&c{target} {clan_tag}"
+    lore:
+      - "&8Procurado"
+      - ""
+      - "&7Recompensa: &a{amount}"
+      - "&7Contribuintes: &f{contributors_count}"
+      - "&7Desde: &f{date}"
+      - ""
+      - "&eAbata este jogador em PvP para"
+      - "&eresgatar o valor total!"
+  top-hunter-head:
+    name: "&6#{position} &f{player} {clan_tag}"
+    lore:
+      - "&8Caçador de Recompensas"
+      - ""
+      - "&7Total Ganho: &a{earned}"
+      - "&7Cabeças Resgatadas: &e{claimed}"
+  dropped-head:
+    name: "&cCabeça de {target}"
+    lore:
+      - "&7Executado por: &f{killer}"
+      - "&7Recompensa resgatada: &a{amount}"
+      - "&7Data: &f{date}"

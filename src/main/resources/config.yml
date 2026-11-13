@@ -1,0 +1,148 @@
+database:
+  type: "SQLITE"
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "dbounty"
+    username: "root"
+    password: ""
+    use-ssl: false
+
+settings:
+  minimum-amount: 1000.0
+  maximum-amount: 100000000.0
+  tax-percentage: 10.0
+  allow-stacking: true
+  broadcast-on-place: true
+  broadcast-on-claim: true
+  broadcast-minimum-amount: 5000.0
+
+anti-farm:
+  block-self-bounty: true
+  block-contributor-claim: true
+  block-same-ip-claim: true
+  block-same-clan-bounty: true
+  block-same-clan-claim: true
+  claim-cooldown-seconds: 60
+  combat-tag-seconds: 15
+  claim-on-combat-quit: true
+
+integrations:
+  dclansystem:
+    enabled: true
+    reward-activity-on-claim: true
+  worldguard:
+    enabled: true
+    blocked-regions:
+      - "spawn"
+      - "arena-eventos"
+  playerpoints:
+    enabled: false
+  discord:
+    enabled: false
+    webhook-url: "https://discord.com"
+    bot-name: "dBounty"
+    bot-avatar: ""
+    notify-on-place: true
+    notify-on-claim: true
+    place-embed:
+      title: "Nova Recompensa!"
+      description: "**{sender}** colocou **{amount}** pela cabeca de **{target}**!\nTotal acumulado: **{total}**"
+      color: 16753920
+    claim-embed:
+      title: "Recompensa Resgatada!"
+      description: "**{killer}** executou **{target}** e resgatou **{amount}**!"
+      color: 5763719
+
+head-drop:
+  enabled: true
+  drop-on-ground: false
+  give-directly-to-killer: true
+
+sounds:
+  enabled: true
+  bounty-placed:
+    sound: "LEVEL_UP"
+    volume: 1.0
+    pitch: 1.2
+  bounty-claimed:
+    sound: "WITHER_DEATH"
+    volume: 0.8
+    pitch: 1.0
+  menu-click:
+    sound: "CLICK"
+    volume: 0.5
+    pitch: 1.0
+  error:
+    sound: "VILLAGER_NO"
+    volume: 1.0
+    pitch: 1.0
+
+formatting:
+  currency-symbol: "$"
+  use-short-numbers: true
+  date-format: "dd/MM/yyyy HH:mm"
+
+menus:
+  wanted-list:
+    title: "&8Procurados &7(Página {page}/{max_page})"
+    rows: 6
+    fill-empty-slots:
+      enabled: true
+      material: "STAINED_GLASS_PANE"
+      data: 7
+      name: " "
+    items:
+      previous-page:
+        slot: 45
+        material: "ARROW"
+        data: 0
+        name: "&ePágina Anterior"
+        lore:
+          - "&7Clique para voltar para a página {prev_page}."
+      info-item:
+        slot: 49
+        material: "BOOK"
+        data: 0
+        name: "&6Sistema de Recompensas"
+        lore:
+          - "&7Coloque recompensas pela cabeça"
+          - "&7de seus inimigos usando:"
+          - "&e/bounty colocar <jogador> <valor>"
+          - ""
+          - "&7Sua recompensa atual: &a{player_bounty}"
+          - "&7Total resgatado: &a{player_earned}"
+      top-hunters-button:
+        slot: 50
+        material: "GOLD_SWORD"
+        data: 0
+        name: "&6Ranking de Caçadores"
+        lore:
+          - "&7Clique para ver os maiores"
+          - "&7caçadores de recompensas."
+      next-page:
+        slot: 53
+        material: "ARROW"
+        data: 0
+        name: "&ePróxima Página"
+        lore:
+          - "&7Clique para avançar para a página {next_page}."
+
+  top-hunters:
+    title: "&8Top Caçadores de Recompensas"
+    rows: 4
+    limit: 10
+    slots: [10, 11, 12, 13, 14, 15, 16, 21, 22, 23]
+    fill-empty-slots:
+      enabled: true
+      material: "STAINED_GLASS_PANE"
+      data: 15
+      name: " "
+    items:
+      back-button:
+        slot: 31
+        material: "ARROW"
+        data: 0
+        name: "&cVoltar"
+        lore:
+          - "&7Clique para voltar à lista de procurados."

@@ -1,0 +1,30 @@
+name: dBounty
+version: 1.0.0
+main: com.diogocorreadcs.bounty.BountyPlugin
+author: diogocorreadcs
+description: Sistema de recompensas por cabeca modular e otimizado para 1.8.8.
+depend: [Vault]
+softdepend: [dClanSystem, PlaceholderAPI, WorldGuard, PlayerPoints]
+
+commands:
+  bounty:
+    description: Comando principal do sistema de recompensas.
+    aliases: [recompensa, recompensas, procurados, bounties]
+    usage: /<command>
+
+permissions:
+  dbounty.use:
+    description: Permite abrir o menu de procurados.
+    default: true
+  dbounty.place:
+    description: Permite colocar recompensas em jogadores.
+    default: true
+  dbounty.check:
+    description: Permite verificar a recompensa de um jogador.
+    default: true
+  dbounty.top:
+    description: Permite ver o ranking de cacadores.
+    default: true
+  dbounty.admin:
+    description: Permite gerenciar e remover recompensas administrativamente.
+    default: op
